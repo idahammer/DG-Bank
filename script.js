@@ -13,7 +13,7 @@ $(document).ready(function() {
   });
 
   // Important! Initialise Hammer
-  var hammertime = new Hammer($('body').get(0));
+  var hammertime = new Hammer($('.swipearea').get(0));
 
   // Listen for 'swipe' events
   hammertime.on('swipe', onSwipe);
@@ -41,7 +41,7 @@ function onSwipe(e) {
 
   // Set our red amount to the background
   // and use 0 for the green and blue values
-  $('body').css({
+  $('.swipearea').css({
     'background-color': 'rgb('+ red +',0,0)'
   });
 }
