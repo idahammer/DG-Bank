@@ -2,5 +2,7 @@ h1 {
   background-color: pink;
   font-size: 100px;
   font-family: fantasy;
-  
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 15px;
 }
