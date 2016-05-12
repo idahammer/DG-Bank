@@ -18,8 +18,15 @@ body, .swipearea {
   margin: auto;
   border-radius: 40px;
   border:4px solid black;
-
-
+}
+.swipebutton {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100px;
+  padding: 10px;
+  background: pink;
+  border-radius: 40px;
+  border:4px solid black;
 }
 h1 {
   color:pink;
