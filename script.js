@@ -34,9 +34,8 @@ function onSwipe(e) {
   {
     // Snap to 1 when over 90%.
     percentage = 1;
-    $(".swipearea").text("hell");
     // Succefully unlocked! do something!
-		document.location.href ='index2.html';
+		document.location.href = $(".swipearea").data("target");
   }
 
   // Convert velocity (which is now 0.0-1.0) to the rgb scale.
