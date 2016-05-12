@@ -26,10 +26,17 @@ function clickHandler() {
 // Change color based on velocity
 function onSwipe(e) {
   var max = 6; // The highest allowed velocity value
-  var percentage = e.velocityX / max;
+  var percentage = Math.abs(e.velocityX) / max;
 
   // Make sure we don't exceed 1
   percentage = Math.min(percentage, 1);
+  if(percentage > 0.9)
+  {
+    // Snap to 1 when over 90%.
+    percentage = 1;
+    $(".swipearea").text("hell");
+    // Succefully unlocked! do something!
+  }
 
   // Convert velocity (which is now 0.0-1.0) to the rgb scale.
   // In the basic way of expressing colour, each part of colour

@@ -18,8 +18,13 @@ body, .swipearea {
   margin: auto;
 }
 h1 {
+<<<<<<< Updated upstream
   color:pink;
   font-size: 68px;
+=======
+color:pink;
+  font-size:small-caps 68px;
+>>>>>>> Stashed changes
   font-family: fantasy;
   padding-left: 10px;
   padding-right: 10px;
