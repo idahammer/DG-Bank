@@ -30,11 +30,12 @@ function onSwipe(e) {
 
   // Make sure we don't exceed 1
   percentage = Math.min(percentage, 1);
-  if(percentage > 0.9)
+  if(percentage > 0.8)
   {
     // Snap to 1 when over 90%.
     percentage = 1;
     // Succefully unlocked! do something!
+    $(".swipearea").text($(".swipearea").data("target"));
 		document.location.href = $(".swipearea").data("target");
   }
 
