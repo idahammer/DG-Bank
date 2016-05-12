@@ -9,9 +9,7 @@ body {
   background: black;
   -ms-touch-action: none;
 }
-* {
-  -webkit-user-select: none;
-}
+
 h1 {
   background-color: pink;
   font-size: 100px;
