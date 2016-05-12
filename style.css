@@ -16,6 +16,7 @@ body, .swipearea {
   height: 100px;
   background: grey;
   margin: auto;
+  padding: 0;
   border-radius: 40px;
   border:4px solid black;
 }
@@ -24,10 +25,12 @@ body, .swipearea {
   box-sizing: border-box;
   height: 100%;
   width: 100px;
-  padding: 10px;
+  padding: 0;
+  margin: 0;
   background: pink;
   border-radius: 40px;
   border:4px solid black;
+  visibility: hidden; /* Disabled handel for now */
 }
 h1 {
   color:pink;

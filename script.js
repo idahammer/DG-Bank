@@ -7,6 +7,16 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  /* Disabled slider handle - not working.
+  $('#swipearea').on('pointerdown', function(e) {
+    //e.preventDefault();
+    setSwipeButtonPos(0);
+  });
+  $('#swipearea').on('pointerup', function(e) {
+    //e.preventDefault();
+    setSwipeButtonPos(1);
+  });*/
+
   // Important! Initialise Hammer
   var hammertime = new Hammer($('#swipearea').get(0));
 
@@ -14,17 +24,23 @@ $(document).ready(function() {
   hammertime.on('swipe', onSwipe);
 });
 
+function setSwipeButtonPos(percentage) {
+  var wb = $("#swipebutton").outerWidth();
+  var whb = wb / 2;
+  var w = $("#swipearea").innerWidth() - wb;
+  var px = (w * percentage);
+  console.log(px);
+  $("#swipebutton").css({left: px + "px"});
+}
+
 // Change color based on velocity
 function onSwipe(e) {
   var max = 6; // The highest allowed velocity value
   var percentage = Math.abs(e.velocityX) / max;
-  var w = $("#swipearea").width();
-  console.log(w);
 
   // Make sure we don't exceed 1
   percentage = Math.min(percentage, 1);
-  var px = w * percentage;
-  $("#swipebutton").offset({left: px});
+  //setSwipeButtonPos(percentage);
   if(percentage > 0.8)
   {
     // Snap to 1 when over 90%.
