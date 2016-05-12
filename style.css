@@ -14,17 +14,16 @@ body, .swipearea {
 .swipearea {
   width: 90%;
   height: 100px;
-  background: black;
+  background: grey;
   margin: auto;
+  border-radius: 40px;
+  border:4px solid black;
+
+
 }
 h1 {
-<<<<<<< Updated upstream
   color:pink;
-  font-size: 68px;
-=======
-color:pink;
   font-size:small-caps 68px;
->>>>>>> Stashed changes
   font-family: fantasy;
   padding-left: 10px;
   padding-right: 10px;
