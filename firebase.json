@@ -1,0 +1,9 @@
+{
+  "firebase": "dg-bank",
+  "public": ".",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
