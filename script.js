@@ -43,5 +43,7 @@ function onSwipe(e) {
   // and use 0 for the green and blue values
   $('.swipearea').css({
     'background-color': 'rgb('+ red +',0,0)'
+
   });
+
 }
