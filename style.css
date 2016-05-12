@@ -1,3 +1,14 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  background: black;
+  -ms-touch-action: none;
+}
 h1 {
   background-color: pink;
   font-size: 100px;
