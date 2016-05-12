@@ -18,8 +18,8 @@ body, .swipearea {
   margin: auto;
 }
 h1 {
-  background-color: pink;
-  font-size: 4em;
+  color:pink;
+  font-size: 80px;
   font-family: fantasy;
   padding-left: 10px;
   padding-right: 10px;

@@ -20,17 +20,17 @@ $(document).ready(function() {
 });
 
 function clickHandler() {
-  alert("Yep, you clicked the button in ida!");
+  alert("Yep, you clicked the button in DG-Bank!");
 }
 
 // Change color based on velocity
 function onSwipe(e) {
   var max = 6; // The highest allowed velocity value
   var percentage = e.velocityX / max;
-  
+
   // Make sure we don't exceed 1
   percentage = Math.min(percentage, 1);
-  
+
   // Convert velocity (which is now 0.0-1.0) to the rgb scale.
   // In the basic way of expressing colour, each part of colour
   // can be expressed from 0-255, with 255 being the maximum
