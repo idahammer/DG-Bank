@@ -36,6 +36,7 @@ function onSwipe(e) {
     percentage = 1;
     $(".swipearea").text("hell");
     // Succefully unlocked! do something!
+		document.location.herf ="index2.html";
   }
 
   // Convert velocity (which is now 0.0-1.0) to the rgb scale.
