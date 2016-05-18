@@ -25,6 +25,9 @@ $(document).ready(function() {
   // Important! Initialise Hammer
   var hammertime = new Hammer($('#swipearea').get(0));
 
+  // Enable horizontal and vertical swipe.
+  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+
   // Listen for 'swipe' events
   hammertime.on('swipe', onSwipe);
 });
@@ -40,9 +43,10 @@ function setSwipeButtonPos(percentage) {
 
 // Change color based on velocity
 function onSwipe(e) {
-  var max = 6; // The highest allowed velocity value
+  // Get the highest allowed velocity value from swipeara (defaults to 6).
+  var max = $("#swipearea").data("speed") || 6; 
 
-  // Check swipe amunt.
+  // Check swipe amunt (0-1).
   var percentage = 0;
   var swipedir = $("#swipearea").data("direction"); 
   if(swipedir == "vertical") 
@@ -56,15 +60,14 @@ function onSwipe(e) {
 
   // Make sure we don't exceed 1
   percentage = Math.min(percentage, 1);
-  //setSwipeButtonPos(percentage);
   if(percentage > 0.8) {
     // Snap to 1 when over 90%.
     percentage = 1;
+
     // Succefully unlocked! do something!
 		document.location.href = $(".swipearea").data("target");
 
     // not sure if we should have it here?? I could not restart the firebase...
-
     ga('send', {
       hitType: 'event',
       eventCategory: 'SwipeArea',
