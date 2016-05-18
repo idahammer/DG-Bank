@@ -41,13 +41,22 @@ function onSwipe(e) {
   // Make sure we don't exceed 1
   percentage = Math.min(percentage, 1);
   //setSwipeButtonPos(percentage);
-  if(percentage > 0.8)
-  {
+  if(percentage > 0.8) {
     // Snap to 1 when over 90%.
     percentage = 1;
     // Succefully unlocked! do something!
-		document.location.href = $("#swipearea").data("target");
-  }
+		document.location.href = $(".swipearea").data("target");
+
+    // not sure if we should have it here?? I could not restart the firebase...
+
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'SwipeArea',
+      eventAction: 'Swipe',
+      eventLabel: 'They swiped'
+    });
+}
+
 
   // Convert velocity (which is now 0.0-1.0) to the rgb scale.
   // In the basic way of expressing colour, each part of colour
