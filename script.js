@@ -16,6 +16,11 @@ $(document).ready(function() {
     //e.preventDefault();
     setSwipeButtonPos(1);
   });*/
+  /*$('#swipearea').on('touchmove', function(e) {
+    //e.preventDefault();
+    console.dir(e);
+    //setSwipeButtonPos(1);
+  });*/
 
   // Important! Initialise Hammer
   var hammertime = new Hammer($('#swipearea').get(0));
@@ -36,7 +41,18 @@ function setSwipeButtonPos(percentage) {
 // Change color based on velocity
 function onSwipe(e) {
   var max = 6; // The highest allowed velocity value
-  var percentage = Math.abs(e.velocityX) / max;
+
+  // Check swipe amunt.
+  var percentage = 0;
+  var swipedir = $("#swipearea").data("direction"); 
+  if(swipedir == "vertical") 
+  {
+    // Vertical swipe.
+    percentage = Math.abs(e.velocityY) / max;
+  } else {
+    // Horizontal swipe.
+    percentage = Math.abs(e.velocityX) / max;
+  }
 
   // Make sure we don't exceed 1
   percentage = Math.min(percentage, 1);
