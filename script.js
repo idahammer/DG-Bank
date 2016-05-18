@@ -44,7 +44,7 @@ function setSwipeButtonPos(percentage) {
 // Change color based on velocity
 function onSwipe(e) {
   // Get the highest allowed velocity value from swipeara (defaults to 6).
-  var max = $("#swipearea").data("speed") || 6; 
+  var max = 6; 
 
   // Check swipe amunt (0-1).
   var percentage = 0;
