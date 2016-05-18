@@ -23,12 +23,12 @@ font-family: Tahoma, Geneva, sans-serif;
 font-size: 15px;
 }
 
-.swipearea {
+.swipearea4 {
   position: absolute;
-  top:100px;
+  top:400px;
     left: 20px;
   width: 90%;
-  height: 100px;
+  height: 20px;
   background: grey;
   margin: auto;
   padding: 0;
@@ -37,11 +37,11 @@ font-size: 15px;
 }
 .swipebutton {
   position: absolute;
-  top:100px;
-    left: 20px;
+  top:400px;
+  left: 20px;
   box-sizing: border-box;
   height: 100%;
-  width: 100px;
+  width: 20px;
   padding: 0;
   margin: 0;
   background: pink;
