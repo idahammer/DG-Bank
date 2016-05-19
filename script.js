@@ -44,12 +44,12 @@ function setSwipeButtonPos(percentage) {
 // Change color based on velocity
 function onSwipe(e) {
   // Get the highest allowed velocity value from swipeara (defaults to 6).
-  var max = 6; 
+  var max = 6;
 
   // Check swipe amunt (0-1).
   var percentage = 0;
-  var swipedir = $("#swipearea").data("direction"); 
-  if(swipedir == "vertical") 
+  var swipedir = $("#swipearea").data("direction");
+  if(swipedir == "vertical")
   {
     // Vertical swipe.
     percentage = Math.abs(e.velocityY) / max;
@@ -65,7 +65,7 @@ function onSwipe(e) {
     percentage = 1;
 
     // Succefully unlocked! do something!
-		document.location.href = $(".swipearea").data("target");
+		document.location.href = $("#swipearea").data("target");
 
     // not sure if we should have it here?? I could not restart the firebase...
     ga('send', {
