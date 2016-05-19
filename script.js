@@ -48,13 +48,16 @@ $(document).ready(function() {
   });*/
 
   // Important! Initialise Hammer
-  var hammertime = new Hammer($('#swipearea').get(0));
+  var swipearea = $('#swipearea').get(0); 
+  if(swipearea) {
+    var hammertime = new Hammer(swipearea);
 
-  // Enable horizontal and vertical swipe.
-  hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
+    // Enable horizontal and vertical swipe.
+    hammertime.get('swipe').set({ direction: Hammer.DIRECTION_ALL });
 
-  // Listen for 'swipe' events
-  hammertime.on('swipe', onSwipe);
+    // Listen for 'swipe' events
+    hammertime.on('swipe', onSwipe);
+  }
 });
 
 function setSwipeButtonPos(percentage) {
