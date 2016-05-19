@@ -19,6 +19,19 @@ $(document).ready(function() {
     });
   });
 
+  $(".button2").click(function () {
+    document.location.href = "done.html"
+
+    // not sure if we should have it here?? I could not restart the firebase...
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Button2',
+      eventAction: 'click',
+      eventLabel: 'Done'
+    });
+  });
+
+
   /* Disabled slider handle - not working.
   $('#swipearea').on('pointerdown', function(e) {
     //e.preventDefault();
