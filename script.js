@@ -87,6 +87,13 @@ function onSwipe(e) {
       eventAction: 'Swipe',
       eventLabel: 'They swiped'
     });
+  } else {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'SwipeArea',
+      eventAction: 'Swipe',
+      eventLabel: 'They failed to swipe'
+    });
   }
 
 
