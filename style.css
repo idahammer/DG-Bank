@@ -22,11 +22,10 @@ left: 0%;
 font-family: Tahoma, Geneva, sans-serif;
 font-size: 15px;
 }
-
 .swipearea {
   position: absolute;
   top:100px;
-    left: 20px;
+  left: 20px;
   width: 90%;
   height: 100px;
   background: grey;
@@ -34,6 +33,9 @@ font-size: 15px;
   padding: 0;
   border-radius: 40px;
   border:4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .vertical {
   top: 200px;
