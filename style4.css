@@ -23,6 +23,17 @@ font-family: Tahoma, Geneva, sans-serif;
 font-size: 15px;
 }
 
+.button2 {
+  background-color: grey;
+  color: white;
+  margin-top: 200px;
+  margin-left: 100px;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  font-family: Tahoma, Geneva, sans-serif;
+}
 .swipearea4 {
   position: absolute;
   top:400px;
