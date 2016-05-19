@@ -103,4 +103,3 @@ function onSwipe(e) {
     'background-color': 'rgb('+ red +',0,0)'
   });
 }
-
