@@ -26,13 +26,14 @@ font-size: 15px;
 .button2 {
   background-color: grey;
   color: white;
-  margin-top: 200px;
+  float: right;
+  padding: 10px;
+  position: absolute;
   margin-left: 100px;
-  height: 50px;
-  width: 100px;
-  text-align: center;
-  font-size: 15px;
+  top: 0%;
+  left: 0%;
   font-family: Tahoma, Geneva, sans-serif;
+  font-size: 15px;
 }
 
 .swipearea3 {
