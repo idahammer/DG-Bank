@@ -77,6 +77,7 @@ function onSwipe(e) {
     percentage = 1;
 
     // Succefully unlocked! do something!
+    $("#swipearea").text("Unlocked!");
 		document.location.href = $("#swipearea").data("target");
 
     // not sure if we should have it here?? I could not restart the firebase...
@@ -85,6 +86,13 @@ function onSwipe(e) {
       eventCategory: 'SwipeArea',
       eventAction: 'Swipe',
       eventLabel: 'They swiped'
+    });
+  } else {
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'SwipeArea',
+      eventAction: 'Swipe',
+      eventLabel: 'They failed to swipe'
     });
   }
 
