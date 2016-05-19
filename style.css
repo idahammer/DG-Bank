@@ -11,6 +11,12 @@ body, .swipearea {
 * {
   -webkit-user-select: none;
 }
+.text {
+  position:absolute;
+  top: 230px;
+  left: 20px;
+
+}
 .button1 {
 background-color: grey;
 color: white;
