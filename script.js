@@ -92,4 +92,17 @@ function onSwipe(e) {
 
   });
 
+  $(".button1").click(function () {
+    document.location.href = $(".button1").data("target");
+
+    // not sure if we should have it here?? I could not restart the firebase...
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Button1',
+      eventAction: 'click',
+      eventLabel: 'Next side'
+    });
+}
+  }
+
 }
