@@ -7,6 +7,18 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
+  $(".button1").click(function () {
+    document.location.href = $(".button1").data("target");
+
+    // not sure if we should have it here?? I could not restart the firebase...
+    ga('send', {
+      hitType: 'event',
+      eventCategory: 'Button1',
+      eventAction: 'click',
+      eventLabel: 'Next side'
+    });
+  });
+
   /* Disabled slider handle - not working.
   $('#swipearea').on('pointerdown', function(e) {
     //e.preventDefault();
@@ -74,7 +86,7 @@ function onSwipe(e) {
       eventAction: 'Swipe',
       eventLabel: 'They swiped'
     });
-}
+  }
 
 
   // Convert velocity (which is now 0.0-1.0) to the rgb scale.
@@ -89,20 +101,6 @@ function onSwipe(e) {
   // and use 0 for the green and blue values
   $('#swipearea').css({
     'background-color': 'rgb('+ red +',0,0)'
-
   });
-
-  $(".button1").click(function () {
-    document.location.href = $(".button1").data("target");
-
-    // not sure if we should have it here?? I could not restart the firebase...
-    ga('send', {
-      hitType: 'event',
-      eventCategory: 'Button1',
-      eventAction: 'click',
-      eventLabel: 'Next side'
-    });
 }
-  }
 
-}
