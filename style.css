@@ -11,6 +11,12 @@ body, .swipearea {
 * {
   -webkit-user-select: none;
 }
+.text {
+  position:absolute;
+  top: 220px;
+  left: 20px;
+
+}
 .button1 {
 background-color: grey;
 color: white;
@@ -21,6 +27,17 @@ top: 0%;
 left: 0%;
 font-family: Tahoma, Geneva, sans-serif;
 font-size: 15px;
+}
+.button2 {
+  background-color: grey;
+  color: white;
+  margin-top: 200px;
+  margin-left: 100px;
+  height: 50px;
+  width: 100px;
+  text-align: center;
+  font-size: 15px;
+  font-family: Tahoma, Geneva, sans-serif;
 }
 .swipearea {
   position: absolute;
@@ -37,6 +54,7 @@ font-size: 15px;
   justify-content: center;
   align-items: center;
 }
+
 .vertical {
   top: 200px;
   left: 20px;
